@@ -37,9 +37,24 @@ while True:
         if len(text) > 0:
             print(text)
             headers = {"User-Agent":"LetheCardChecker","Accept":"*/*","Content-Type": "application/json"} 
-            response = requests.get("https://api.scryfall.com/cards/named",headers=headers,params={"fuzzy":text})
-            cardDat=response.text
-            print(cardDat)
+            response = requests.get("https://api.scryfall.com/cards/named",headers=headers,params={"fuzzy":text, "pretty":True})
+            if response.status_code == 404:
+                print("card name invalid, try getting a clearer picture or ensure that your OCR is setup for the language the card is in")
+            else:
+                cardDat=response.json()
+                legalities=cardDat["legalities"]
+                legal = []
+                nlegal = []
+                for i in legalities:
+                    if legalities[i]=="not_legal":
+                        nlegal.append(i)
+                    else:
+                        legal.append(i)
+                print(text, "is legal in: ")
+                print(legal)
+                print("and not legal in: ")
+                print(nlegal)
+            
     if key == 81 or key == 113:
         break
         
