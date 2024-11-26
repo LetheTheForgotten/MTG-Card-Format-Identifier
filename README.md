@@ -1,4 +1,4 @@
-# Magic-The-Gathering-Card-Identifier
+# MTG Card Format Identifier
 Script that uses tesseract,opencv and the [scryfall](https://scryfall.com/) api to tell you what formats the card your camera is pointing at is legal in.
 
 ## Prerequisites:
