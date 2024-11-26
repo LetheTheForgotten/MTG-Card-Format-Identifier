@@ -37,3 +37,5 @@ I recomend you only have a single camera connected while running this.
 If you're hasbro and want to file a legal complaint I am not claiming to represent you in any capacity, Magic: The Gathering and all related content  is copyright Wizards of the Coast, LLC. This Script is not produced by or endorsed by Wizards of the Coast.
 
 If theres a bug or you just want to ask a question you can reach me at [twitter](https://x.com/LetheForgot) or [bluesky](https://bsky.app/profile/letheforgot.bsky.social)
+
+I will probably update this to be more useful outside of my very specific niche thing that bothered me at some point.
